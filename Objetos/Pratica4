@@ -1,0 +1,56 @@
+
+
+class Pessoa {
+    nome;
+    idade;
+    apelido;
+    anoNascimento;
+
+    constructor(nome, idade, apelido) {
+        this.nome = nome;
+        this.idade = idade;
+        this.apelido = apelido;
+        this.anoNascimento = 2022 - idade;
+
+    }
+
+    descrever() {
+        console.log('Meu nome é' + { this: nome } + 'e minha idade é' + { this: idade })
+    }
+}
+
+const davi = new Pessoa('Davi', 13, 'HGDB');
+const nina = new Pessoa('Nina', 16, 'HGDB')
+
+console.log(davi);
+console.log(nina);
+
+const jorge1 = new Pessoa("Ziul Egroj", 47, "gonçalves de barros");
+
+    console.log(jorge1);
+
+
+
+const jorge = {
+    nome: "jorge luiz",
+    idade: 47,
+    apelido: "gonçalves de barros",
+anoNascimento:"",
+    descrever: function () {
+        console.log('Meu nome é' + { this: nome } + 'e minha idade é' + { this: idade })
+    }
+}
+
+console.log(jorge.nome + ' ' + jorge.apelido)
+console.log(jorge)
+//jorge.descrever();
+
+const atributo = 'idade';
+const atributo2 = 'nome';
+
+
+console.log(jorge[atributo] + jorge[atributo2]);
+console.log(jorge['apelido']);
+
+jorge['nome'] = 'Egroj';
+jorge.nome = 'Egroj';
